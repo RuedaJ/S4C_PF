@@ -1,21 +1,155 @@
-
 {
   "top_priorizados": [
     {
       "actor": "EIT Climate-KIC",
       "categoria": "aceleradora",
       "jurisdiccion": "UE",
-      "foco_tematico": ["clima","energía","economía circular"],
+      "foco_tematico": ["clima","energía","economía circular","resiliencia"],
       "mercados_objetivo": ["África","LatAm","Asia","MENA"],
-      "instrumentos": ["grant","equity"],
+      "instrumentos": ["grant","equity","TA/tech-assistance"],
       "ticket_min_eur": 100000,
       "ticket_max_eur": 2000000,
       "fase": ["pilot/TRL4-6","growth/TRL7-9"],
-      "criterios_elegibilidad": {"tipo_entidad":["startup","SME"],"TRL_min":"4","impacto_minimo":"≥50 tCO2e/año","cofinanciacion":"sí"},
-      "pruebas_alineacion_EM": ["Convocatoria Africa","Proyecto en India"],
-      "evidencias": [{"fuente":"https://climate-kic.org","tipo":"convocatoria","fecha":"2024-06-15"}],
-      "confiabilidad_fuentes":0.9
+      "criterios_elegibilidad": {
+        "tipo_entidad": ["startup","SME","ONG"],
+        "ubicacion_beneficiario": "UE o países en desarrollo (según programa)",
+        "ubicacion_proyecto": "África, LatAm, Asia, MENA",
+        "TRL_min": "4",
+        "impacto_minimo": "definido por programa (p.ej. ≥50 tCO2e/año)",
+        "cofinanciacion": "sí (~30%)",
+        "exclusiones": ["proyectos fósiles","deforestación"]
+      },
+      "pruebas_alineacion_EM": ["Convocatoria ‘Africa Flagship’ 2024","Proyectos en India y Kenia"],
+      "evidencias": [
+        {"fuente":"https://www.climate-kic.org/programmes/africa/","tipo":"convocatoria","fecha":"2024-06-15"},
+        {"fuente":"https://www.climate-kic.org/partners-projects/","tipo":"portfolio","fecha":"2024-04-01"}
+      ],
+      "nota_recencia": "≤24 meses",
+      "confiabilidad_fuentes": 0.90,
+      "contacto_o_call": "https://www.climate-kic.org/programmes/africa/",
+      "puntuacion_componentes": {"alineacion_EM": 90, "foco_climatico": 95, "ticket_fase": 90, "claridad": 90},
+      "puntuacion_final": 91.2
+    },
+    {
+      "actor": "EIT InnoEnergy",
+      "categoria": "aceleradora",
+      "jurisdiccion": "UE",
+      "foco_tematico": ["energía","clima","resiliencia"],
+      "mercados_objetivo": ["África","Asia","LatAm"],
+      "instrumentos": ["equity","grant","TA/tech-assistance"],
+      "ticket_min_eur": 250000,
+      "ticket_max_eur": 1000000,
+      "fase": ["pilot/TRL4-6","growth/TRL7-9"],
+      "criterios_elegibilidad": {
+        "tipo_entidad": ["startup","SME"],
+        "ubicacion_beneficiario": "UE o países en desarrollo (según programa)",
+        "ubicacion_proyecto": "África, Asia, LatAm",
+        "TRL_min": "4",
+        "impacto_minimo": "reducción de CO2 verificable (p.ej. ≥100 tCO2e/año)",
+        "cofinanciacion": "sí (~25%)",
+        "exclusiones": []
+      },
+      "pruebas_alineacion_EM": ["Global Energy Access 2023 (India/África)","Deals en Brasil y Sudáfrica"],
+      "evidencias": [
+        {"fuente":"https://www.innoenergy.com/what-we-do/ventures/accelerator/","tipo":"convocatoria","fecha":"2023-11-20"},
+        {"fuente":"https://www.innoenergy.com/our-investments/portfolio/","tipo":"portfolio","fecha":"2024-05-10"}
+      ],
+      "nota_recencia": "≤24 meses",
+      "confiabilidad_fuentes": 0.85,
+      "contacto_o_call": "https://www.innoenergy.com/what-we-do/ventures/accelerator/",
+      "puntuacion_componentes": {"alineacion_EM": 85, "foco_climatico": 90, "ticket_fase": 95, "claridad": 85},
+      "puntuacion_final": 88.2
+    },
+    {
+      "actor": "Global Energy Efficiency and Renewable Energy Fund (GEEREF)",
+      "categoria": "fondo_impacto",
+      "jurisdiccion": "UE",
+      "foco_tematico": ["energía","clima"],
+      "mercados_objetivo": ["África","Asia","LatAm"],
+      "instrumentos": ["equity"],
+      "ticket_min_eur": 500000,
+      "ticket_max_eur": 2000000,
+      "fase": ["pilot/TRL4-6","growth/TRL7-9"],
+      "criterios_elegibilidad": {
+        "tipo_entidad": ["fund manager","vehículo de inversión"],
+        "ubicacion_beneficiario": "UE",
+        "ubicacion_proyecto": "países en desarrollo",
+        "TRL_min": "4",
+        "impacto_minimo": "≥100 tCO2e/año por proyecto",
+        "cofinanciacion": "sí (≈50% por fondo co-inversor)",
+        "exclusiones": ["proyectos fósiles"]
+      },
+      "pruebas_alineacion_EM": ["Solar en Kenia","Co-inversiones en Vietnam"],
+      "evidencias": [
+        {"fuente":"https://www.geeref.com/portfolio/","tipo":"portfolio","fecha":"2024-03-22"},
+        {"fuente":"https://www.eib.org/en/products/blending/geeref/index.htm","tipo":"informe","fecha":"2023-12-10"}
+      ],
+      "nota_recencia": "≤24 meses",
+      "confiabilidad_fuentes": 0.80,
+      "contacto_o_call": "https://www.eib.org/en/products/blending/geeref/index.htm",
+      "puntuacion_componentes": {"alineacion_EM": 85, "foco_climatico": 90, "ticket_fase": 85, "claridad": 85},
+      "puntuacion_final": 86.2
+    },
+    {
+      "actor": "Switch Africa Green (Programa de la UE)",
+      "categoria": "fondo_impacto",
+      "jurisdiccion": "UE",
+      "foco_tematico": ["economía circular","agua","agricultura regenerativa"],
+      "mercados_objetivo": ["África"],
+      "instrumentos": ["grant","TA/tech-assistance"],
+      "ticket_min_eur": 50000,
+      "ticket_max_eur": 200000,
+      "fase": ["pilot/TRL3-5"],
+      "criterios_elegibilidad": {
+        "tipo_entidad": ["SME","ONG","cooperativa"],
+        "ubicacion_beneficiario": "SACU/ECOWAS (según call)",
+        "ubicacion_proyecto": "África subsahariana",
+        "TRL_min": "3",
+        "impacto_minimo": "reducción de residuos o agua ≥20%",
+        "cofinanciacion": "sí (≥20%)",
+        "exclusiones": ["proyectos extractivos"]
+      },
+      "pruebas_alineacion_EM": ["SAG Fase II 2023 (Senegal)","Pilotos en Ghana y Côte d'Ivoire"],
+      "evidencias": [
+        {"fuente":"https://www.switchafricagreen.org/call-for-proposals.html","tipo":"convocatoria","fecha":"2023-08-30"},
+        {"fuente":"https://www.switchafricagreen.org/project-directory.html","tipo":"portfolio","fecha":"2024-02-14"}
+      ],
+      "nota_recencia": "≤24 meses (una evidencia rozando el umbral)",
+      "confiabilidad_fuentes": 0.85,
+      "contacto_o_call": "https://www.switchafricagreen.org/call-for-proposals.html",
+      "puntuacion_componentes": {"alineacion_EM": 88, "foco_climatico": 85, "ticket_fase": 85, "claridad": 85},
+      "puntuacion_final": 86.2
     }
   ],
-  "pipeline_adicional": []
+  "pipeline_adicional": [
+    {
+      "actor": "GreenTech Accelerator",
+      "categoria": "aceleradora",
+      "jurisdiccion": "Alemania",
+      "foco_tematico": ["energía","economía circular","agua"],
+      "mercados_objetivo": ["LatAm","África"],
+      "instrumentos": ["grant","TA/tech-assistance"],
+      "ticket_min_eur": 0,
+      "ticket_max_eur": 100000,
+      "fase": ["idea","pilot/TRL4-6"],
+      "criterios_elegibilidad": {
+        "tipo_entidad": ["startup","SME"],
+        "ubicacion_beneficiario": "LatAm, África",
+        "ubicacion_proyecto": "LatAm, África",
+        "TRL_min": "2",
+        "impacto_minimo": "no definido",
+        "cofinanciacion": "no",
+        "exclusiones": ["proyectos con fines de lucro"]
+      },
+      "evidencias": [
+        {"fuente":"https://greentechaccelerator.com/programme-latin-america","tipo":"convocatoria","fecha":"2023-04-01"},
+        {"fuente":"https://greentechaccelerator.com/projects","tipo":"portfolio","fecha":"2022-11-15"}
+      ],
+      "nota_recencia": ">24 meses",
+      "confiabilidad_fuentes": 0.75,
+      "contacto_o_call": "https://greentechaccelerator.com/apply",
+      "puntuacion_componentes": {"alineacion_EM": 60, "foco_climatico": 75, "ticket_fase": 75, "claridad": 60},
+      "puntuacion_final": 66.8
+    }
+  ]
 }
