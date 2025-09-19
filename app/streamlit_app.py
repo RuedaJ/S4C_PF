@@ -1,7 +1,15 @@
-
 import streamlit as st
 import json
-from app import scoring, filters, explain, data_loader
+
+# Prefer package-style imports; fall back to local path when needed
+try:
+    from app import scoring, filters, explain, data_loader
+except ModuleNotFoundError:
+    # Allow running the script directly (no package context)
+    import sys, pathlib
+    sys.path.append(str(pathlib.Path(__file__).resolve().parent))
+    import scoring, filters, explain, data_loader
+
 
 st.set_page_config(page_title="Buscador de Financiación Climática EU", layout="wide")
 
