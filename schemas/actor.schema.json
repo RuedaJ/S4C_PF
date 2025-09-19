@@ -1,1 +1,161 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Actor schema",
+  "type": "object",
+  "required": [
+    "actor",
+    "categoria",
+    "foco_tematico",
+    "mercados_objetivo",
+    "instrumentos",
+    "ticket_min_eur",
+    "ticket_max_eur",
+    "fase",
+    "criterios_elegibilidad",
+    "evidencias"
+  ],
+  "properties": {
+    "actor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "categoria": {
+      "type": "string"
+    },
+    "jurisdiccion": {
+      "type": "string"
+    },
+    "foco_tematico": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mercados_objetivo": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "instrumentos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ticket_min_eur": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ticket_max_eur": {
+      "type": [
+        "integer",
+        "number"
+      ]
+    },
+    "fase": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "criterios_elegibilidad": {
+      "type": "object",
+      "properties": {
+        "tipo_entidad": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "ubicacion_beneficiario": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ubicacion_proyecto": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TRL_min": {
+          "type": [
+            "string",
+            "integer",
+            "null"
+          ]
+        },
+        "impacto_minimo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cofinanciacion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "exclusiones": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "pruebas_alineacion_EM": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidencias": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fuente",
+          "tipo",
+          "fecha"
+        ],
+        "properties": {
+          "fuente": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string"
+          },
+          "fecha": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        }
+      }
+    },
+    "confiabilidad_fuentes": {
+      "type": [
+        "number",
+        "integer"
+      ]
+    },
+    "contacto_o_call": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
