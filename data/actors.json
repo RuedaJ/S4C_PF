@@ -1,1 +1,21 @@
 
+{
+  "top_priorizados": [
+    {
+      "actor": "EIT Climate-KIC",
+      "categoria": "aceleradora",
+      "jurisdiccion": "UE",
+      "foco_tematico": ["clima","energía","economía circular"],
+      "mercados_objetivo": ["África","LatAm","Asia","MENA"],
+      "instrumentos": ["grant","equity"],
+      "ticket_min_eur": 100000,
+      "ticket_max_eur": 2000000,
+      "fase": ["pilot/TRL4-6","growth/TRL7-9"],
+      "criterios_elegibilidad": {"tipo_entidad":["startup","SME"],"TRL_min":"4","impacto_minimo":"≥50 tCO2e/año","cofinanciacion":"sí"},
+      "pruebas_alineacion_EM": ["Convocatoria Africa","Proyecto en India"],
+      "evidencias": [{"fuente":"https://climate-kic.org","tipo":"convocatoria","fecha":"2024-06-15"}],
+      "confiabilidad_fuentes":0.9
+    }
+  ],
+  "pipeline_adicional": []
+}
